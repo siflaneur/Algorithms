@@ -6,7 +6,7 @@
 
 def reverse(str_of_number: str):
     """
-    slice operation fullfill the reverse operation
+    数字分类别输出，我也不想这么麻烦，但是Python没有内置一个方便的函数
     :param str_of_number: str
     :return: str
     """
