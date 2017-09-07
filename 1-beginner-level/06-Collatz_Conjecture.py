@@ -29,9 +29,8 @@ def is_loop(n):
     return False
 
 
-def solution(number) -> str:
+def solution(number: int) -> int:
     count = 0
-    print('Start')
     for i in range(0, number + 1, 2):
         if is_loop(i):
             count += 1
