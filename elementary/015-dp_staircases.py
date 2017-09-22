@@ -43,4 +43,4 @@ def move(a, b):
 
 
 if __name__ == '__main__':
-    print(move(0, 50))
+    print(move(0, 10))
