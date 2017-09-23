@@ -26,7 +26,7 @@ def memo(func):
 def move(a, b):
     """
     #1. Normal_solution:use two loops manipulating the walking step
-    #2. Memorization_solution:
+    #2. Memorization_solution: add the decorator "@memo"
     :param a: int
     :param b: int
     :return: count -> int
