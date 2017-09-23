@@ -4,7 +4,7 @@
 """
 from functools import lru_cache
 
-from beginner_level.utils import get_all_numbers_sum
+from beginner.utils import get_all_numbers_sum
 
 
 @lru_cache()
