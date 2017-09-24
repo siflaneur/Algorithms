@@ -29,8 +29,10 @@ def better_solution(expression):
     nums = set()
     for i in re.finditer('\w', expression):
         nums.add(i.group(0))
-    for seq in permutations(range(10), 10):
-        # TODO
+    # for seq in permutations(range(10), 10):
+
+
+# TODO
 
 
 if __name__ == '__main__':

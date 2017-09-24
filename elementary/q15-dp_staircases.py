@@ -36,8 +36,8 @@ def move(a, b):
         return 0
     if a == b:
         return 1
-    for i in range(1, 4):
-        for j in range(1, 4):
+    for i in range(1, 5):
+        for j in range(1, 5):
             count += move(a + i, b - j)
     return count
 
