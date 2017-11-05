@@ -36,8 +36,8 @@ count = 0
 
 
 def solution_better(target, coins, usage):
-    """递归版本：用总额减去总额中的最大面额"""
-    global count
+    """递归版本"""
+    global count, time
     coin = coins.pop()
     if not len(coins):
         if target // coin <= usage:
@@ -45,3 +45,15 @@ def solution_better(target, coins, usage):
     else:
         for i in range(0, target // coin + 1):
             solution_better(target - coin * i, coins.copy(), usage - i)
+
+
+def case_of_cash(amount, j):
+    """另一个递归版本，思想是SICP书中例题"""
+    v = [10, 50, 100, 500]
+    if amount == 0:
+        return 1
+    if amount < 0:
+        return 0
+    if j < 0:
+        return 0
+    return case_of_cash(amount - v[j], j) + case_of_cash(amount, j-1)
