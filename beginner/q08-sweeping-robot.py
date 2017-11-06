@@ -6,11 +6,11 @@
 """
 
 
-def solution(searched: list, n):
+def solution(searched, n):
     """
-    return the count
-    :param searched: A list like [[0, 0]]
-    :param n: default = 12
+    利用深度优先搜索的原理，递归版本
+    :param searched: A list like [[0, 0], ...]
+    :param n: 即机器人行走的步数
     :return count: all possibilities
     """
     count = 0
@@ -21,8 +21,3 @@ def solution(searched: list, n):
         if next_position not in searched:
             count += solution(searched + [next_position], n)
     return count
-
-
-if __name__ == '__main__':
-    for n in range(1, 15):
-        print(solution([[0, 0]], n))
