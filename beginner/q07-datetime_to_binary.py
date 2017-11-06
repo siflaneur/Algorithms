@@ -6,7 +6,10 @@
 """
 from datetime import timedelta, date
 
-from utils import reverse
+
+def is_palidrome(x, flag='d'):
+    return format(x, flag)[::-1] == format(x, flag)
+
 
 start_date = date(1964, 10, 10)
 end_date = date(2020, 7, 25)
@@ -20,7 +23,7 @@ def date_generator(start_date, end_date):
 
 def solution():
     for each_date in date_generator(start_date, end_date):
-        if reverse(bin(each_date)) == bin(each_date):
+        if is_palidrome(each_date, 'b'):
             print(each_date)
 
 
